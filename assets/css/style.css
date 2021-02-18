@@ -1,6 +1,15 @@
+/* swiper */
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+
+.modal-dialog-scrollable {
+  margin-top: 100px !important;
+  height: 360px !important;
+}
 /* navbar */
 .navbar {
-  position: relative;
   z-index: 1;
 }
 .navbar-brand {
@@ -59,22 +68,46 @@
   padding: 5px;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7) !important;
 }
+.bulat_modal {
+  border-radius: 50%;
+  width: 100%;
+  margin-top: -20%;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7) !important;
+}
+.alert_judul {
+  margin-top: 3%;
+  background-color: rgb(37, 78, 122);
+  box-shadow: 10px 10px 1px rgb(190, 181, 178) !important;
+  height: 50px !important;
+}
+.tulisan_about {
+  color: white;
+}
 .tentang {
-  border-radius: 12px;
+  border-radius: 20px !important;
+  height: 80%;
   background-color: white;
   /* box-shadow: 10px 5px 6px 0px !important; */
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7) !important;
 }
-.its_logo {
-  width: 51%;
+.isi_tentang {
   margin-top: 2%;
-  margin-left: -10%;
-  text-align: left;
+}
+.its_logo {
+  width: 40px;
+  margin-top: -3px;
+  margin-left: -13px;
+  text-align: right;
 }
 .tulisan_gambar {
-  padding-top: 3%;
-  font-size: 8.5px;
+  margin-left: -5px;
+  font-size: 14px;
   text-align: right;
+}
+.video {
+  width: 100%;
 }
 
 /* Tab Version */
@@ -95,13 +128,16 @@
     padding: 6px;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7) !important;
   }
-  .tulisan_gambar {
-    font-size: 15px;
+  .video {
+    width: 80%;
   }
 }
 
 /* Desktop Version */
 @media (min-width: 992px) {
+  .navbar {
+    position: relative;
+  }
   .navbar-brand,
   .nav-link {
     color: white !important;
@@ -139,12 +175,29 @@
   .tombol {
     text-transform: uppercase;
   }
+  .tentang {
+    height: 115px;
+  }
   .tulisan_gambar {
-    font-size: 26px;
+    font-size: 30px;
   }
   .its_logo {
-    width: 47%;
-    padding-top: -1.5%;
+    width: 100px;
+    margin-top: -5px;
     margin-left: 0%;
+  }
+  .coba_paragraph {
+    text-align: right;
+    text-align: left;
+    text-align: justify;
+    text-align: center;
+  }
+  .video {
+    width: 75%;
+  }
+  .tulisan_about {
+    font-size: 23px;
+    margin-top: -4px;
+    font-weight: 10px;
   }
 }

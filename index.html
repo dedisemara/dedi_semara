@@ -5,23 +5,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/poly.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/all.css">
+  <!-- <script src="photos.js"></script> -->
 </head>
 <body>
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav id="home" class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">DediSemara</a>
+      <a href="#" data-toggle="modal" data-target="#exampleModal" class="navbar-brand" >DediSemara</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Home</a>
-          <a class="nav-item nav-link" href="#">About</a>
-          <a class="nav-item nav-link" href="#">Portofolio</a>
+          <a class="nav-item nav-link" href="#about">About</a>
+          <a class="nav-item nav-link" href="#moment">Moment</a>
           <a class="nav-item btn btn-success tombol" href="#">Contact</a>
         </div>
       </div>
@@ -39,7 +41,9 @@
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-md text-center">
-      <img src="picture/dedi.jpg" class="bulat" alt="">      
+        <a href="#" data-toggle="modal" data-target="#modalfoto">
+            <img src="picture/dedi.jpg" class="bulat">      
+        </a>
     </div>
   </div>
 </div>
@@ -48,43 +52,182 @@
 
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <div class="col-sm-6 col-md-6 col-8 shading_luar">
-      <div class="row justify-content-center tentang" style="margin-top: -3%;">
-        <div class="col-8">  
+    <div class="col-sm-6 col-md-6 col-9">
+      <div class="row justify-content-center alert tentang" style="margin-top: -3%;">
+        <div class="col-10 col-md-8 col-xs-10" >  
           <h6 class="tulisan_gambar">I Putu Dedi Semara Putra <br>Engineering Physics ITS</h6>
         </div>
-        <div class="col-4">
+        <div class="col-2 col-md-4">
           <img class="its_logo" src="picture/logoits.png">
         </div>
-        </div>
+       </div>
+    </div>
+   </div>
+</div>
+
+<!-- akhir nama -->
+<!-- about -->
+<div class="container-fluid" style="margin-top: 10px;">
+  <div id="about" class="alert alert_judul">
+    <p class="tulisan_about">About</p>
+  </div>
+  <div class="isi_tentang col-md-12 col-12">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <p class="coba_paragraph" style="text-align: justify;">
+            Thank you very much for your a chance given to me, <br> Let me introduce my self. My name is I Putu Dedi Semara Putra, you can call me Dedi. I'm 3rd year student of Engineering Physics ITS. I have one year experience at electromedical companny as a Quality Analyzer. As a engineering student I’m very interested about renewable energy, Instrumentation, calibration and Data scientice. after I joined with Web Design Program Asia University, I'm Looking forward to getting experience at green energy laboratories overseas.
+        </p>
+        <p class="coba_paragraph" style="text-align: justify;">
+            I was born in Denpasar Bali. My hobby is dancing especially balinese dance, playing traditional balinese music, badminton and going to the gym. my dream is to share traditional Balinese culture around the world. The Following is my Friend perform at Agung Jagat Karana Temple.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 text-center ">
+        <video class="video" src="video/singseniBali.mp4" poster="picture/twibon.png" controls></video>
       </div>
     </div>
   </div>
 </div>
-<!-- akhir nama -->
-<!-- about -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12 col-sm-6 col-lg-8">
 
+<!-- Moment -->
+<div class="container-fluid">
+  <div id="moment" class="alert alert_judul">
+    <p class="tulisan_about">Moment</p>
+</div>
+<div class="row">
+  <div class="col-12">
+    <button onclick="coba()">coba</button>
+    <button onclick="kembali()">coba</button>
+  </div>
+  <div class="col-12">
+    <img id="main" src="picture/dedisemara.jpg" width="100%">
+  </div>
+</div>
+</div>
+<!-- akhir moment -->
+
+<!-- Modal -->
+<div class="modal fade container-fluid" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">I Putu Dedi Semara Putra</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <ul>
+        <div class="row">
+          <div class="col-5">
+            <li>Date Of birth</li>
+          </div>
+          <div class="col-7">
+            : 02 May 1998
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <li>Place of Birth</li>
+          </div>
+          <div class="col-7">
+            : Denpasar, Bali, Indoesia.
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <li>Motto</li>
+          </div>
+          <div class="col-7">
+            : Pantaskan Diri (Grow Yourself).
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <li>Status</li>
+          </div>
+          <div class="col-7">
+            : Young Wild and Free.
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <li>Job</li>
+          </div>
+          <div class="col-7">
+            : Quality Assurance Engineer at Elitech.id
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <li>Last Education</li>
+          </div>
+          <div class="col-7">
+            : associate's degree, instrumentation engineering.
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <li>Hobby</li>
+          </div>
+          <div class="col-7">
+            :  balinese dance, playing traditional balinese music, badminton and going to the gym.
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5">
+            <li>interested Issues</li>
+          </div>
+          <div class="col-7">
+            :  Culture, environment, Engineering & Sport.
+          </div>
+        </div>
+      </ul>
+      </div>
     </div>
   </div>
 </div>
-<!-- akhir tentang -->
-<!-- <h1>Hello Everyone, Welcome To my First Page! Om Swastyastu <img src="assets/picture/heading.png" style="width: 2%;"></h1>
-<p>
-    Thank you very much for your a chance geven to me, <br> Let me introduce my self. My name is I Putu Dedi Semara Putra, you can call me Dedi. I'm 3rd year student of Engineering Physics ITS. I have one year experience at electromedical companny as a Quality Analyzer. As a engineering student I'm very intresting about renewable energy, Instrumentation, kalibration and Data scientice. after I joined with Web Design Program Asia University, I'm Looking forward to getting experience at green energy laboratories overseas.
-</p>
-<p>
-    I was born in Denpasar Bali. My hobby is dancing especially balinese dance, playing traditional balinese music, badminton and GYM. My dream is share about traditional balinese culture for the around world.
-</p> -->
-<!-- <img src="picture/dedisemara.jpg" style="width: 40%;"> -->
+<!-- modal akhir -->
+<!-- modal foto -->
+<div class="modal fade" id="modalfoto" tabindex="-1" role="dialog" aria-labelledby="modaltable" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="container-fluid text-center" style="margin-top: 150px !important;">
+        <img src="picture/dedi.jpg" class="bulat_modal">
+      </div>
+    </div>
+  </div>
+  
+  <p id="demo"></p>
+
+
+<script>
+  i = 0;
+  var pic = (['picture/logoits.png', 'picture/dedi.jpg', 'picture/energy.jpg']);
+  var tul = (['When My Culture Club (Sing Seni) Acepted Reward From the mayor is mother Surabaya', 'when i give lombok earthquake victims helper from my art event result', 'Loss']);
+  coba = function() {
+    i++;   
+    if (i >= pic.length) {
+      i = 0;
+    }
+  document.getElementById("demo").innerHTML = tul[i];
+  document.getElementById("main").src = this.pic[i];
+  }
+  kembali = function() {
+    i++;
+    if (i >= pic.length) {
+      i = 0;
+    }
+  document.getElementById("demo").innerHTML = tul[i];
+  document.getElementById("main").src = this.pic[i];
+}
+</script>
+<script src="assets/javascript/swiper-bundle.js"></script>
+<script src="assets/javascript/swiper-bundle.min.js"></script>
 <script src="assets/javascript/jquery.slim.min.js"></script>
 <script src="assets/javascript/bootstrap.bundle.min.js"></script>
 <script src="assets/javascript/all.js"></script>
 
 
-
+</body>
 
 </html>
       

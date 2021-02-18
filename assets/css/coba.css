@@ -1,0 +1,42 @@
+.latar_gambar {
+  height: 600px;
+  justify-content: center;
+  margin-left: 13px !important;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  height: auto !important;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.swiper-container {
+  justify-content: center !important;
+}
+.gallery-top {
+  height: 90%;
+  width: 100%;
+}
+
+.gallery-thumbs {
+  height: 10%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+@media (min-width: 992px) {
+  .swiper-button-white {
+    color: black !important;
+  }
+}

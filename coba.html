@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/coba.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/poly.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    
+    <title>Document</title>
+</head>
+<body>
+<!-- <div class="row">
+
+    <div class="col-8">
+        <p id="demo"></p>
+    </div>
+</div> -->
+<div class="row">
+    <div class="col-12 container-fluid latar_gambar">
+<!-- Swiper -->
+    <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(picture/moment/1.JPG)" ></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/a.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/aa.jpg); padding-top: 200px !important;"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/b.JPG); padding-top: 200px !important;"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/bb.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/bbb.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/c.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/d.jpeg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/e.jpeg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/ee.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/f.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/g.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/l.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/z.jpg)"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white" style="margin-right: 15px;"></div>
+        <div class="swiper-button-prev swiper-button-white" style="margin-left: 15px;"></div>
+    </div>
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(picture/moment/1.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/a.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/aa.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/b.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/bb.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/bbb.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/c.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/d.jpeg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/e.jpeg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/ee.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/f.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/g.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/l.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/z.jpg)"></div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="assets/javascript/swiper-bundle.js"></script>
+<script src="assets/javascript/swiper-bundle.min.js"></script>
+<script src="assets/javascript/jquery.slim.min.js"></script>
+<script src="assets/javascript/bootstrap.bundle.min.js"></script>
+<script src="assets/javascript/all.js"></script>
+<script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      loop: true,
+      freeMode: true,
+      loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        effect: 'cube',
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      spaceBetween: 10,
+      loop: true,
+      loopedSlides: 5, //looped slides should be the same
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+
+    let button = document.getElementById("button")
+    let text = document.getElementById("demo")
+
+    /* swiper events */
+    galleryTop.on("slideChange", function() {
+    if(this.realIndex == 0){
+        text.innerHTML = "dediganteng";  
+    }
+    if(this.realIndex == 1){
+        text.innerHTML = "loss"; 
+    }
+    });
+</script>
+
+</body>
+</html>
