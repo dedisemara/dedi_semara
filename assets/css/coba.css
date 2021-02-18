@@ -1,6 +1,7 @@
 .latar_gambar {
   height: 600px;
   justify-content: center;
+  justify-content: center !important;
   margin-left: 13px !important;
 }
 
@@ -24,7 +25,8 @@
 .gallery-thumbs {
   height: 10%;
   box-sizing: border-box;
-  padding: 10px 0;
+  padding: 20px 0;
+  margin-top: 10px;
 }
 
 .gallery-thumbs .swiper-slide {

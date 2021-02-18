@@ -16,20 +16,22 @@
 <!-- <div class="row">
 
     <div class="col-8">
-        <p id="demo"></p>
     </div>
 </div> -->
 <div class="row">
+    <div class="alert container alert-success col-10">
+        <p id="demo"></p>
+    </div>
     <div class="col-12 container-fluid latar_gambar">
 <!-- Swiper -->
     <div class="swiper-container gallery-top">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(picture/moment/1.JPG)" ></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/a.JPG)"></div>
-            <div class="swiper-slide" style="background-image:url(picture/moment/aa.jpg); padding-top: 200px !important;"></div>
-            <div class="swiper-slide" style="background-image:url(picture/moment/b.JPG); padding-top: 200px !important;"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/1.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/aa.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/b.JPG)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/bb.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(picture/moment/bbb.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/z2.JPG)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/c.JPG)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/d.jpeg)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/e.jpeg)"></div>
@@ -38,6 +40,9 @@
             <div class="swiper-slide" style="background-image:url(picture/moment/g.JPG)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/l.jpg)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/z.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/z1.jpeg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/z3.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/z4.jpg"></div>
             </div>
             <!-- Add Arrows -->
             <div class="swiper-button-next swiper-button-white" style="margin-right: 15px;"></div>
@@ -45,12 +50,12 @@
     </div>
     <div class="swiper-container gallery-thumbs">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(picture/moment/1.JPG)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/a.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/1.JPG)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/aa.jpg)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/b.JPG)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/bb.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(picture/moment/bbb.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/z2.JPG)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/c.JPG)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/d.jpeg)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/e.jpeg)"></div>
@@ -59,6 +64,9 @@
             <div class="swiper-slide" style="background-image:url(picture/moment/g.JPG)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/l.jpg)"></div>
             <div class="swiper-slide" style="background-image:url(picture/moment/z.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/z1.jpeg)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/z3.JPG)"></div>
+            <div class="swiper-slide" style="background-image:url(picture/moment/z4.jpg"></div>
         </div>
     </div>
 </div>
@@ -70,19 +78,28 @@
 <script src="assets/javascript/bootstrap.bundle.min.js"></script>
 <script src="assets/javascript/all.js"></script>
 <script>
+    // slider
     var galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      loop: true,
-      freeMode: true,
-      loopedSlides: 5, //looped slides should be the same
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
+        spaceBetween: 10,
+        slidesPerView: 4,
+            breakpoints: {
+                480: {
+                slidesPerView: 5,
+                },
+                900: {
+                slidesPerView: 10,
+                }
+            },
+        loop: true,
+        freeMode: true,
+        loopedSlides: 10, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+            });
     var galleryTop = new Swiper('.gallery-top', {
         effect: 'cube',
-      grabCursor: true,
-      cubeEffect: {
+        grabCursor: true,
+        cubeEffect: {
         shadow: true,
         slideShadows: true,
         shadowOffset: 20,
@@ -90,7 +107,7 @@
       },
       spaceBetween: 10,
       loop: true,
-      loopedSlides: 5, //looped slides should be the same
+      loopedSlides: 10, //looped slides should be the same
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -99,9 +116,8 @@
         swiper: galleryThumbs,
       },
     });
-
-    let button = document.getElementById("button")
     let text = document.getElementById("demo")
+    let button = document.getElementById("button")
 
     /* swiper events */
     galleryTop.on("slideChange", function() {
@@ -110,6 +126,9 @@
     }
     if(this.realIndex == 1){
         text.innerHTML = "loss"; 
+    }
+    if(this.realIndex == 2){
+        text.innerHTML = "op"; 
     }
     });
 </script>
