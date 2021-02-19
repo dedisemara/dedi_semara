@@ -1,9 +1,73 @@
 /* swiper */
-.swiper-container {
-  width: 600px;
-  height: 300px;
+.penjelasan {
+  border-radius: 20px !important;
+  height: 60px !important;
+  background-color: white;
+  /* box-shadow: 10px 5px 6px 0px !important; */
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7) !important;
 }
 
+.latar_gambar {
+  height: 600px;
+  justify-content: center;
+  justify-content: center !important;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  height: auto !important;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.swiper-container {
+  justify-content: center !important;
+}
+.gallery-top {
+  height: 90%;
+  width: 100%;
+}
+
+.gallery-thumbs {
+  height: 10%;
+  box-sizing: border-box;
+  padding: 20px 0;
+  margin-top: 10px;
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+@media (min-width: 992px) {
+  .swiper-button-white {
+    color: black !important;
+  }
+}
+@media (max-width: 400px) {
+  .penjelasan {
+    border-radius: 20px !important;
+    height: 40px !important;
+    background-color: white;
+    /* box-shadow: 10px 5px 6px 0px !important; */
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7) !important;
+  }
+  #demo {
+    margin-top: -13px !important;
+    font-size: 10.5px;
+  }
+  .latar_gambar {
+    margin-top: -40px;
+  }
+}
+
+/* modal */
 .modal-dialog-scrollable {
   margin-top: 100px !important;
   height: 360px !important;
@@ -16,7 +80,9 @@
   font-family: Poly;
   font-size: 36px !important;
 }
-
+.navbar-toggler {
+  background-color: rgb(190, 181, 178) !important;
+}
 /* utility */
 .tombol {
   border-radius: 40px !important;
@@ -110,6 +176,9 @@
   width: 100%;
 }
 
+.pribadi {
+  margin-top: 5px;
+}
 /* Tab Version */
 @media (min-width: 576px) {
   .jumbotron {
